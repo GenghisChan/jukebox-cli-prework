@@ -62,7 +62,7 @@ def play(songs)
 
   if (1..9).to_a.include?(user_input.to_i)
       puts "Now playing #{songs[user_input.to_i - 1]}"
-  elsif (1..9).include?(user_input)
+  elsif songs.include?(user_input)
       puts "Now playing #{user_input}"
   else
       puts "Invalid input, please try again"
