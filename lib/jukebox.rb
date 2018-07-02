@@ -66,7 +66,8 @@ def play(songs)
       puts "Now playing #{user_input}"
   else
       puts "Invalid Input, please try again"
-
+end
+end
 def exit_jukebox
   puts "Goodbye"
 end
