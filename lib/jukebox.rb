@@ -57,16 +57,15 @@ def list(songs)
 end
 
 def play(songs)
-  puts "Please enter a song name or number:"
-  song_to_play = gets.chomp
-  if (1..9).to_a.include?(song_to_play.to_i)
-    puts "Playing #{songs[song_to_play.to_i - 1]}"
-  elsif songs.include?(song_to_play)
-    puts "Playing #{song_to_play}"
+  puts "Please Enter a song number or title"
+  user_input = gets.chomp
+
+  if (1..9).to_a.include?(user_input.to_i)
+      puts "Now playing #{songs[user_input.to_i - 1]}"
+  elsif (1..9).include?(user_input)
+      puts "Now playing #{user_input}"
   else
-    puts "Invalid input, please try again"
-  end
-end
+      puts "Invalid Input, please try again"
 
 def exit_jukebox
   puts "Goodbye"
